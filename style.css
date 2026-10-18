@@ -1,0 +1,115 @@
+body{
+    background-image:url('myphotoo.jpg');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    min-height:100vh;
+    margin:0;
+    color:white;
+    font-family:sans-serif;
+}
+h1{
+  color:aqua;
+  position:relative;
+}
+h1{
+    position:absolute;
+    top:0;
+    right:50px;
+}
+img{
+   max-width:100%;
+   width:280px;
+   height:180px;
+   object-fit:cover;
+   border-radius:15px;
+   margin:10px;
+   display:flex;
+   desplay-flex:center;
+   flex-direction:colomn;
+}
+.card{
+     width:70%;
+     max-width:380px;
+     padding:50px 20px;
+     margin:1pxauto;
+     border:2px solid red;
+     border-radius:10px; 
+     box-shadow:0px 5px 5px 5px blue;
+     background:rgba(0,0,0,0.6);
+     backdrop-filter:blur(10px);
+     taxt-align:center;
+     postion:relative; 
+       }
+    .card{
+        position:absolute;
+        top:200px;
+        right:25px;
+    }
+        
+    /* button area */
+    button {
+    background-color:lightblue;
+    color:green; 
+    padding: 20px 40px;
+    border-radius: 20px;
+    border: none;
+    margin: 5px;
+    background-position:center;
+    text-align:center;
+    position:relative;
+    }
+    button{
+        position:absolute;
+        top:265px;
+        right:100px;
+    }
+
+/* 2. Button Base Style */
+button {
+    background-color: aqua;
+    color: green;
+    padding: 14px 28px;
+    border-radius: 20px;
+    border: none;
+    margin: 15px auto;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.3s ease; /* Makes transitions smooth */
+}
+
+/* 3. Button Hover Animation (Clean syntax!) */
+button:hover {
+    background-color: #00e5ff;
+    color: #ffffff;
+    transform: scale(1.05) translateY(-3px); /* Lifts up slightly */
+    animation: flicker 0.8s infinite alternate; /* Loops the flicker keyframe */
+}
+
+/* 4. Click Feedback */
+button:active {
+    transform: scale(0.95);
+}
+
+/* 5. Keyframes for the Neon Flicker Effect */
+@keyframes flicker {
+    0% {
+        box-shadow: 0 0 10px cyan;
+        text-shadow: 0 0 5px cyan;
+    }
+    100% {
+        box-shadow: 0 0 25px cyan, 0 0 45px #00d2ff;
+        text-shadow: 0 0 12px white;
+    }
+}button:hover {
+    background: purple;
+    transform: scale(1.08) translateY(-5px);
+    box-shadow: 0 5px 15px gray;
+}
+
+button:active {
+    transform: scale(0.88);
+}
+       

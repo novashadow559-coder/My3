@@ -1,0 +1,79 @@
+body{
+    background-image:url('myphotoo.jpg');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    min-height:100vh;
+    margin:0;
+    color:white;
+    font-family:sans-serif;
+}
+p{
+   color: orange;
+   position:relative;
+   }
+ p{
+  position:absolute;
+    top:0;
+    right:100px;
+ }
+h3{
+  color:red;
+}
+    /* box area*/
+/* 1. Grid Container */
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 equal columns side-by-side */
+    gap: 15px;
+    width: 92%;
+    max-width: 450px;
+    margin: 20px auto;
+    align-items: stretch; /* Forces left and right cards in each row to match height */
+}
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(0, 210, 255, 0.35);
+    border-radius: 14px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    
+    /* 🔴 ADD THIS LINE RIGHT HERE: */
+    height: fit-content; /* Stops the card from stretching into a giant column! */
+    
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* 3. THIS FIXES THE SHAPE: Forces all images into identical height & crop */
+.card img {
+    width: 100%;
+    height: 130px;          /* ALL images will be forced to exactly 130px tall */
+    object-fit: cover;      /* Crops tall/wide photos neatly without stretching them! */
+    border-radius: 10px;
+    display: block;
+}
+
+/* 4. Button locked to bottom */
+.card button {
+    width: 100%;
+    background: #00d2ff;
+    color: #04101e;
+    border: none;
+    padding: 9px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: auto;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 12px #00d2ff;
+}
